@@ -1,0 +1,21 @@
+
+@hostname = pokeapi.glitch.me
+@version = v1
+@paths = pokemon
+@search = 4
+
+GET https://{{hostname}}/{{version}}/{{paths}}/{{search}}
+Content-Type: application/json
+
+###
+
+@host = localhost
+@port = 5033
+@hostnameApi = {{host}}:{{port}}
+@pathsApi = token
+@content = { "username": "robinsonjra", "password": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9", "ipv4": "192.168.1.10" }
+
+POST http://{{hostnameApi}}/{{pathsApi}}
+Content-Type: application/json
+
+{{content}}
